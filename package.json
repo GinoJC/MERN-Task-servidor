@@ -1,12 +1,19 @@
 {
-  "name": "servidor",
+  "name": "merntaskservidor",
   "version": "1.0.0",
-  "description": "",
+  "description": "MERN API para MERN Tasks",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Gino Carignano",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2"
+  }
 }
