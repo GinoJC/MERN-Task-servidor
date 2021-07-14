@@ -1,8 +1,7 @@
 const express = require('express');
 const conectarDB = require('./config/db');
-require('dotenv').config({
-  path: 'variables.env'
-});
+const cors = require('cors');
+require('dotenv').config({ path: 'variables.env' });
 
 // crear el servidor
 const app = express();
@@ -10,10 +9,10 @@ const app = express();
 // conectar a la DB
 conectarDB();
 
+app.use(cors());
+
 // habilitar express.json
-app.use(express.json({
-  extended: true
-}));
+app.use(express.json({ extended: true }));
 
 // puerto de la app
 const PORT = process.env.PORT || 4000;
