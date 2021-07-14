@@ -1,7 +1,6 @@
 const express = require('express');
 const conectarDB = require('./config/db');
 const cors = require('cors');
-require('dotenv').config({ path: 'variables.env' });
 
 // crear el servidor
 const app = express();
@@ -24,4 +23,4 @@ app.use('/api/proyectos', require('./routes/proyectos'));
 app.use('/api/tareas', require('./routes/tareas'));
 
 // arrancar la app
-app.listen(port, '0.0.0.0', () => console.log(`Listening in the port ${PORT}`));
+app.listen(port, '0.0.0.0', () => console.log(`Listening in the port ${port}`));
